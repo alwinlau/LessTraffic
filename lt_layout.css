@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/*
+   
+   Layout for Less Traffic
+   Author: Alwin Lau
+   Date: 2/12/20
+   
+   Filename: lt_layout.css
+
+*/
+
+/* Background Image */
+html {
+	background: url(backgrounds/car.png) 100%/cover no-repeat;
+}
+body {
+	background: url(backgrounds/carbkgrd.png) 100%/cover no-repeat padding-box;
+	max-width: 1280px;
+	margin: auto;
+}
+
+/* Horizontal Navigation Layout */
+body header nav ul li {
+	display: block;
+	padding: 5px;
+	float: left;
+	border: 2px inset black;
+}
+.dropdown {
+	float: right;
+	overflow: hidden;
+}
+.dropdown-content {
+	display: none;
+	font-size: 1.2em;
+	color: blue;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 380px;
+	max-width: 520px;
+	border: 2px inset black;
+	padding: 3px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown:hover {
+	background-color: #555;
+	color: white;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+  }
+
+/* Window and Body Layout */
+	body header img {
+		display: block;
+		clear: top;
+		align-content: center;
+		width: 100%;
+		background: ivory;
+	}
+	article {
+		padding-top: 10px;
+		background-color: rgba(221, 235, 221, 0.3);
+		display: block;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		min-height: 100%;
+	}
+
+/* Image Styles */
+	article > div.enforce > ul > img {
+		display: block;
+		padding: 0px 30px 10px 10px;
+		float: left;
+		clear: left;
+		width: 20%;
+		height: auto;
+	}
+	div.enforce img {
+		display: block;
+		padding: 150px 70px 0px 0px;
+		float: right;
+		width: 10%;
+		height: auto;
+	}
+	div.oosd img {
+		display: block;
+		padding-right: 38%;
+		float: right;
+		clear: both;
+		width: 25%;
+		height: auto;
+	}
+	div.merge img {
+		display: block;
+		padding-right: 43%;
+		float: right;
+		clear: both;
+		width: 15%;
+		height: auto;
+	}
+	div.services img {
+		display: block;
+		padding-right: 42.5%;
+		float: right;
+		clear: left;
+		width: 20%;
+		height: auto;
+	}
+
+/* Header Layout */
+	h1 {
+		display: block;
+		width: 95%;
+	}
+
+/* Paragraph Layout */
+	p {
+		display: block;
+		width: 90%;
+		clear: both;
+		padding: 5px;
+	}
+
+/* List Layout */
+	ul{
+		margin: 5px;
+		padding: 10px;
+		display: inline-block;
+		list-style-type: square;
+		clear: left;
+		width: 45%;
+	}
+
+/* Article Layout */
+	.enforce {
+		display: block;
+		background: url(backgrounds/hwpatrol.png) 100%/cover no-repeat padding-box;
+		margin-left: 5px;
+		width: auto;
+		float: left;
+	}
+	.oosd {
+		display: block;
+		background: url(backgrounds/azlicense.png) 100%/cover no-repeat padding-box;
+		margin-left: 5px;
+		width: auto;
+		float: left;
+	}
+	.merge {
+		display: block;
+		background: url(backgrounds/merge.png) 100%/cover no-repeat padding-box;
+		margin-left: 5px;
+		width: auto;
+		float: left;
+	}
+	.ttm {
+		display: block;
+		background: url(backgrounds/65mph.png) 100%/cover no-repeat padding-box;
+		margin-left: 5px;
+		width: auto;
+		float: left;
+	}
+
+/* Input Type Layout */
+	input[type='submit'] {
+		clear: both;
+		padding: 5px;
+		margin: 15px;
+		border: 5px double blue;
+	}
+
+/* Form Layout Styles */
+	div.formRow {
+    	display: -webkit-flex;
+    	display: flex;
+    	-webkit-flex-flow: row wrap;
+    	flex-flow: row wrap;
+    	margin: 7px 0px;
+	}
+	div.formRow > * {
+    	-webkit-flex: 1 1 150px;
+    	flex: 1 1 150px;
+	}
+	form#order > fieldset {
+		border-radius: 20px;
+		-webkit-flex: 1 1 300px;
+		flex: 1 1 300px;
+		padding: 10px;
+		margin: 10px;
+		width: 50%;
+	}
+	form#order > label#total {
+		margin-left: 20px; 
+	}
+	legend {
+		background-color: blue;
+		color: white;
+		padding: 5px;
+		width: auto;
+	}
+
+/* Footer Layout */
+	footer {
+		clear: both;
+		align-content: center;
+	}

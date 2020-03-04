@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<!--
+    Less Traffic
+    Author: Alwin Lau 
+    Date: 2/20/20
+
+    Filename: orderform.html
+   -->
+   <meta charset="utf-8" />
+   <title>Less Traffic Services Carpool Ride Along Partner Pricing</title>
+   <link href="lt_layout.css" rel="stylesheet"/> 
+   <link href="lt_styles.css" rel="stylesheet"/> 
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="lesstraffic.html" alt="home"> Home</a></li>
+        <li><a href="ltservices.html" alt="services"> Services</a></li>
+      </ul>
+    </nav>
+    <img src="pictures/lesstraffic.png" alt="header"/>
+  </header>
+  <form id="order" method="POST">
+    <fieldset id="custInfo">
+    <legend>Customer Information</legend>
+    <div class="formRow">
+        <label for="name">Name *</label>
+        <input name="custName" id="name" type="text" placeholder="first and last name" required />
+    </div>
+    <div class="formRow">
+        <label for="email">E-mail *</label>
+        <input name="custEmail" id="email" type="email" required />
+    </div>
+    <div class="formRow">
+        <label for="phone">Phone number *</label>
+        <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required />
+    </div>
+    <div class="formRow">    
+        <label for="address">Address *</label>
+        <input name="custAddress" id="address" type="text" required />
+    </div>
+    <div class="formRow">
+        <label for="city">City</label>
+        <input name="custCity" id="city" type="text" value="San Diego" />
+    </div>
+    <div class="formRow">
+        <label for="state">State</label>
+        <input name="custState" id="state" type="text" value="CA" required />
+    </div>
+    <div class="formRow">
+        <label for="zip">Zip Code *</label>
+        <input name="custZip" id="zip" type="text" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required />
+    </div>
+    <div class="formRow">
+        <label for="payment">Payment Info *</label>
+        <input name="custPayment" id="payment" type="number" placeholder="#### #### #### ####" pattern="^\d{16}$|\d{4}\s*\d{4}\s*\d{4}\s*\d{4}" required />
+    </div>
+    <div class="formRow">
+        <label id="service" for="service">Service to purchase *</label>
+        <select id="select">
+            <option value="" />Choose your service to purchase</option>
+            <option value="GD" />Guided Drive</option>
+            <option value="CRAP" />Carpool Ride Along Partner $200/8 hr day</option>
+            <option value="DC" />Dash Camera</option>
+        </select>
+    </div>
+
+        <label id="total" for="total" colspan="2">Total Purchase
+        <input name="cost" id="cost" type="text" readonly value=""/>
+        <script>
+          var select = document.querySelector("select");
+          select.addEventListener("change", function(e){
+          if (select.value === "") {
+            document.getElementById("cost").value = "";
+          } else if (select.value === "GD") {
+            document.getElementById("cost").value = "$150";
+          } else if (select.value === "DC") {
+            document.getElementById("cost").value = "$250";
+          } else {
+            document.getElementById("cost").value = "Call for details";
+          }});
+        </script>
+        </label>
+
+    <div id="button">
+      <input type="submit" onclick="" value="Order" />
+    </div>
+    </fieldset>
+  </form>
+  <footer>
+    Remember success sounds like suck less and you suck less with less traffic.&#169;
+  </footer>
+</body>
+</html>

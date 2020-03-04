@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/*
+
+   Styles for Less Traffic
+   Author: Alwin Lau
+   Date: 2/12/20
+   
+   Filename: lt_styles.css
+
+*/
+
+/* Font Styles */
+
+	html {
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 12px;
+		color: black;
+	}
+	body footer address {
+		background-color: rgb(60,128,222);
+		text-align: center;
+	}
+	body footer {
+		background-color: rgb(222,128,60);
+		color: white;
+		text-align: center;
+	}
+
+/* Heading Styles */
+	h1 {
+		font-weight: 3em;
+		font-size: 2em;
+		letter-spacing: 0.2em;
+		margin: 0px;
+		text-align: center;
+	}
+	h2 {
+		font-weight: 2em;
+		letter-spacing: 0.2em;
+		margin: 0px;	
+		font-size: 1.5em;	
+	}
+
+/* Navigation Styles */	
+	body nav {
+		font-size: 0.8em;
+		line-height: 2em;
+	}
+
+/* Paragraph Styles */
+	p {
+		font-size: 1.3em;
+		font-weight: 1.5em;
+		text-align: left;
+	}
+	article > li {
+		font-size: 1.1em;
+		font-weight: 1.1em;
+	}
+
+/* Input Type Styles */
+	input[type='submit'] {
+		font-size: 1.2em;
+	}
+	form#order > label#total {
+		font-size: 1.5em; 
+	}
